@@ -252,6 +252,15 @@ main {
   box-sizing: border-box;
 }
 
+/* change Clear button text color */
+.calc-buttons .clear-btn {
+  color: #bc6c25;
+  font-weight: bold;
+  background-color: #2a3d45;
+  border: 2px solid #decbb7;
+  border-radius: 6px;
+}
+
 #output {
   text-align: center;
   font-size: 1.2rem;
