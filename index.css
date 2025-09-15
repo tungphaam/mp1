@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* make html and body full height */
+html, body {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+               "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* === DESKTOP (default) === */
+#page-wrapper{
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #2a3d45 0%,
+    #5c5552 30%,
+    #7a6c5d 60%,
+    #2a3d45 100%
+  );
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer{
+  background-color: #2a3d45;
+  color: #decbb7;
+  padding: 1rem;
+  flex-shrink: 0;
+  text-align: left;
+}
+
+header, nav, main, footer {
+  background-color: transparent;
+}
+
+
+#container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex: 1;    /* grow to fill available space */
+  overflow-y: auto;
+}
+
+
+nav{
+  background-color: rgba(92, 85, 82, 0.8);
+  color: #decbb7;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem 1rem;
+  height: auto;
+  box-sizing: border-box;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;  
+  gap: 1rem;
+  width: 100%;
+}
+
+nav li {
+  flex: 0 0 auto;
+}
+
+nav a {
+  width: 100%;
+  text-align: center;
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #1b2021;                  /* base text color */
+  background-color: transparent;/* no background */
+  border: 2px solid #decbb7;       /* light border */
+  transition: all 0.3s ease;    /* smooth hover */
+  letter-spacing: 0.5px;        /* subtle spacing */
+}
+
+/* hover focus */
+nav a:hover,
+nav a:focus {
+  background-color: #626c66;
+  color: #decbb7;
+  border-color: #e1ca96;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+main {
+  background-color: rgba(122, 108, 93, 0.8);
+  color: #1b2021;
+  width: 70%;
+  padding: 0 3rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-image {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+.content-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 3rem;
+}
+
+/* bullet points */
+.intro-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  text-align: left;
+}
+
+.intro-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro-list li::before {
+  content: "•";
+  color: #2a3d45;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -0.4rem;
+}
+
+/* for exp internal page */
+#exp-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#exp-page #container {
+  flex: 1;
+  display: flex;
+}
+
+#exp-page main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+#exp-page .content-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+  text-align: left;
+}
+
+#exp-page .job-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+#exp-page .job-details h5 {
+  margin: 0;
+  white-space: nowrap;
+}
+
+#exp-page .job-details .line {
+  flex-grow: 1;
+  border-bottom: 1px dashed #1b2021;
+  margin: 0 10px;
+}
+
+#exp-page .intro-list li::before {
+  content: "•";
+  color: #2a3d45;
+}
+
+
+/* Calculator */
+.calculator {
+  width: 95%;
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #2a3d45;
+  box-sizing: border-box;
+}
+
+.calc-inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.calc-inputs input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.calc-inputs input,
+.calc-buttons button {
+  flex: 1 1 30%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+#output {
+  text-align: center;
+  font-size: 1.2rem;
+  min-height: 1.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #decbb7;
+  color: #decbb7;
+}
+
+#output.negative {
+  color: red;
+  font-weight: bold;
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    padding: 0.5rem;
+    gap: 0.25rem;
+  }
+  .calc-inputs input,
+  .calc-buttons button {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  .calc-buttons {
+    gap: 0.25rem;
+  }
+}
+
+/* === Project cards on page === */
+.project {
+  background: #decbb7;
+  border: 1px solid #5c5552;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+  color: #2a3d45;
+  margin-bottom: 10px;
+}
+
+.project p{
+  margin-bottom: 20px;
+  color: #1b2021;
+}
+
+.github-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #2a3d45;
+  border: 1px solid #decbb7;
+  color: #decbb7;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.github-link:hover {
+  background-color: #626c66;
+  color: #decbb7;
+}
+
+/* === Projects page overrides === */
+#projects-page main {
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 2rem 1.5rem;
+}
+
+#projects-page .projects {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#projects-page .project {
+  text-align: left;
+}
+
+/* === Contact page === */
+.contact-page main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-page main a {
+  word-break: break-word;
+}
+
+/* === MOBILE override (screen <= 1000px) === */
+/* center header on smaller screen */
+@media screen and (max-width: 750px) {
+  header {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-page main {
+    font-size: 1rem;
+  }
+}
+
+/* stack nav above main below 1000px */
+@media screen and (max-width: 1000px) {
+  /* stack nav above main */
+  #container{
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  /* nav takes full width */
+  nav {
+    width: 100%;
+    height: auto;
+    padding: 0.5rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  /* nav links become horizontal */
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  nav li {
+    flex: 1 1 auto;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav a {
+    /* display: block; */
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    /* text-align: center; */
+    /* margin: 0 auto; */
+    /* box-sizing: border-box; */
+  }
+
+  main {
+    /* height: 100vh; */
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Projects | Tung's Resume</title>
+    <link rel='stylesheet' href='../index.css' type='text/css'>
+  </head>
+  <body>
+
+    <div id='page-wrapper'>
+    
+      <header>
+        <h1>Projects</h1>
+        <p> Data Analyst | Computer Science Student</p>
+      </header>
+      
+      <div id='container'>
+          <nav>
+            <ul>
+              <li><a href='../index.html'>Home</a></li>
+              <li><a href='../education/edu.html'>Education</a></li>
+              <li><a href='../exp/exp.html'>Experience</a></li>
+              <li><a href='../certs/certs.html'>Certifications</a></li>
+              <li><a href='../projects/projects.html'>Projects</a></li>
+              <li><a href='../contact/contact.html'>Contact</a></li>
+            </ul>
+          </nav>
+
+          <main>
+            <div class="projects">
+              <div class="project" id="project0">
+                <h3>Boston Budget Analysis Project</h3>
+                <a href="https://github.com/tungphaam/cs506-final-project.git" class="github-link">Github Link</a>
+              </div>
+
+              <div class="project" id="project1">
+                <h3>KPIM DG Financial Project</h3>
+                <a href="https://github.com/tungphaam/KPIM-DG-Financial-Project.git" class="github-link">Github Link</a>
+              </div>
+
+              <div class="project" id="project2">
+                <h3>Vietinbank Project</h3>
+                <a href="https://github.com/tungphaam/Vietinbank-Project.git" class="github-link">Github Link</a>
+              </div>
+            </div>
+
+            <!-- calculator wrapper -->
+            <section id="calculator-wrapper">
+              <h2>Quick Calculator</h2>
+              <div class="calculator">
+                <div class="calc-inputs">
+                  <input type="number" id="first-number" placeholder="First number">
+                  <input type="number" id="second-number" placeholder="Second number">
+              </div>
+              
+              <div class="calc-buttons">
+                <button onclick="addNumbers()">+</button>
+                <button onclick="subtractNumbers()">-</button>
+                <button onclick="multiplyNumbers()">×</button>
+                <button onclick="divideNumbers()">÷</button>
+                <button onclick="powerNumbers()">xʸ</button>
+                <button onclick="clearCalc()">Clear</button>
+              </div>
+
+              <h3 id="output"></h3>
+            </section>
+          </main>
+      </div>
+
+          <footer>
+          <p>&#169; 2025 Tung Pham. All rights reserved.</p>
+          </footer>
+
+    </div>
+ 
+    <script src='projects.js'></script>
+  </body>
+</html>
+
+
