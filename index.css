@@ -108,6 +108,9 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: calc(0.8re, + 0.5vw);
 }
 
 .main-image {
@@ -348,6 +351,13 @@ main {
   word-break: break-word;
 }
 
+@media screen and (min-width:1000px) {
+  main {
+    width: 70%;
+    max-wdith: 70%;
+  }
+}
+
 /* === MOBILE override (screen <= 1000px) === */
 /* center header on smaller screen */
 @media screen and (max-width: 750px) {
@@ -408,7 +418,6 @@ main {
   }
 
   main {
-    /* height: 100vh; */
     width: 100%;
     padding: 1rem 1rem;
   }
