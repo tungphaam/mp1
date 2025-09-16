@@ -268,6 +268,16 @@ main {
   box-sizing: border-box;
 }
 
+.calc-buttons button:hover,
+.calc-buttons button:focus {
+  background-color: #626c66;
+  color: #decbb7;
+  border: 1px solir #e1ca96;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-radius: 6px;
+}
+
 /* change Clear button text color */
 .calc-buttons .clear-btn {
   color: #bc6c25;
@@ -275,6 +285,11 @@ main {
   background-color: #2a3d45;
   border: 2px solid #decbb7;
   border-radius: 6px;
+}
+
+.calc-buttons .clear-btn:hover,
+.calc-buttons .clear-btn:focus {
+  color: #bc6c25;
 }
 
 #output {
@@ -308,6 +323,16 @@ main {
   }
 }
 
+/* reduce the space after the heading */
+#calculator-wrapper .calculator {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+#calculator-wrapper h2 {
+  color: #decbb7;
+  margin-top: 0.2rem;
+}
 /* === Project cards on page === */
 .project {
   background: #decbb7;
@@ -357,7 +382,8 @@ main {
 #projects-page .projects {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 3rem auto 0;
+  padding: 0 1.5rem;
 }
 
 #projects-page .project {
