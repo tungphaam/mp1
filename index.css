@@ -23,10 +23,11 @@ html, body {
   );
   display: flex;
   flex-direction: column;
+  background-color: transparent;
 }
 
 header, footer{
-  background-color: #2a3d45;
+  background-color: transparent;
   color: #decbb7;
   width: 100%;
   max-width: 1200px;
@@ -51,7 +52,7 @@ nav, main {
 
 
 nav{
-  background-color: rgba(92, 85, 82, 0.8);
+  background-color: transparent;
   color: #decbb7;
   width: 30%;
   display: flex;
@@ -102,7 +103,7 @@ nav a:focus {
 }
 
 main {
-  background-color: rgba(122, 108, 93, 0.8);
+  background-color: transparent;
   color: #1b2021;
   width: 70%;
   padding: 0 3rem;
@@ -119,6 +120,14 @@ main {
   height: auto;
   display: block;
   margin: 0 auto 2rem;
+}
+
+.sec-image {
+  max-width: 40%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+  background-color: transparent;
 }
 
 .content-wrapper {
@@ -160,6 +169,13 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(
+    to bottom,
+    #2a3d45 0%,
+    #5c5552 30%,
+    #7a6c5d 60%,
+    #2a3d45 100%
+  );
 }
 
 #exp-page #container {
