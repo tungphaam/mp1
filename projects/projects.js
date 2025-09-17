@@ -48,7 +48,7 @@ function powerNumbers() {
 function clearCalc() {
   document.getElementById('first-number').value = '';
   document.getElementById('second-number').value = '';
-  document.getElementById('output').textContent = '';
+  document.getElementById('output').innerHTML = '';
   document.getElementById('output').classList.remove('negative');
 }
 
